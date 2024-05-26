@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:ital,wght@0,400;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url("GitamCampus.jpeg");
+    background-size: cover;
+}
+.container {
+    margin-top: 120px;
+    margin-left: 200px;
+    width: 1000px;
+    height: 570px;
+    display: flex;
+}
+.first {
+    width: 600px;
+    height: 570px;
+    background-color: #f0f9ff69;
+}
+.login {
+    width: 400px;
+    height: 570px;
+    background-color: #d595957a;
+}
+.login h2 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-top: 120px;
+    color: #db020296;
+    font-size: 35px;
+}
+.first img {
+    margin-top: 100px;
+    height: 150px;
+    margin-left: 80px;
+}
+.first p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    color: #333937ab;
+}
+.USERNAME input, .PASSWORD input {
+    width: 270px;
+    height: 30px;
+    margin-left: 70px;
+    margin-top: 30px;
+    text-align: center;
+}
+.forgot a {
+    font-size: 0.8rem;
+    margin-left: 250px;
+}
+.button button {
+    width: 110px;
+    height: 33px;
+    margin-left: 150px;
+    margin-top: 15px;
+    border-radius: 10px;
+    color: #db020296;
+}

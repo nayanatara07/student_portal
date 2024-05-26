@@ -1,29 +1,22 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/userModel');
+const express = require('express');
+const bodyParser = require('body-parser')
 const dotenv = require('dotenv');
+const connectDB = require('./config/db');
+const User = require('./models/userModel');
+const authRoutes = require('./routes/authRoutes')
 
 dotenv.config();
 
-const protect = async (req, res, next) => {
-    let token;
+const app = express();
 
-    if (
-        req.headers.authorization &&
-        req.headers.authorization.startsWith('Bearer')
-    ) {
-        try {
-            token = req.headers.authorization.split(' ')[1];
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
-            req.user = await User.findById(decoded.id).select('-password');
-            next();
-        } catch (error) {
-            res.status(401).json({ message: 'Not authorized, token failed' });
-        }
-    }
+// Middleware
+app.use(bodyParser.json());
 
-    if (!token) {
-        res.status(401).json({ message: 'Not authorized, no token' });
-    }
-};
-
-module.exports = { protect };
+// Connect to MongoDB
+connectDB();
+app.use('/api/auth',authRoutes)
+// Start the server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
