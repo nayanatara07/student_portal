@@ -3,228 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB BHARAT</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <aside>
-            <div class="top">
-                <div class="logo">
-                    <img src="./images/logo.png" alt="">
-                    <h2>UNI<span class="danger">BUDDY</span></h2>
+        <div class="first">
+            <img src="logo.png" alt="Gitam University Logo">
+            <p>Gitam University, founded in 1980 in Visakhapatnam, India, is a respected institution known for its academic excellence and diverse programs in engineering, management, sciences, and more. It fosters research, promotes global collaborations, and has a strong alumni network, contributing to its reputation as a prominent educational institution.</p>
+        </div>
+        <div class="login">
+            <h2>USER LOGIN</h2>
+            <div id="loginForm">
+                <div class="USERNAME">
+                    <input type="text" id="username" placeholder="USERNAME"> 
                 </div>
-                <div class="close" id="close-btn">
-                    <span class="material-symbols-sharp"> close</span>
+                <div class="PASSWORD">
+                    <input type="password" id="password" placeholder="PASSWORD">
                 </div>
-            </div>
-               
-            <div class="sidebar">
-                <a href="#">
-                    <span class="material-symbols-sharp">grid_view</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">description</span>
-                    <h3>Career Guidance</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">task</span>
-                    <h3>Event Calender</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">query_stats</span>
-                    <h3>Alumni Network</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">mail</span>
-                    <h3>Messages</h3>
-                    <span class="message-count">69</span>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">forum</span>
-                    <h3>Community</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">settings</span>
-                    <h3>Settings</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">logout</span>
-                    <h3>Logout</h3>
-                </a>
-            </div>
-        </aside>
-        <!-- aside end -->
-        <main>
-            <h1> Student Dashboard</h1>
-                
-            <div class="date">
-                <input type="date">
-            </div>
-            
-            <div class="insights">
-                <div class="Project1">
-                    <span class="material-symbols-sharp">groups</span>
-
-                    <div class="middle">
-                        <div class="left">
-                            
-                            <h1>Personal Finance Tracker</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">See Data</small>
+                <div class="forgot"><a href="#">forgot password?</a></div>
+                <div class="button">
+                    <button onclick="login()">LOGIN</button>
                 </div>
-                <!-- end of project1 -->
-                <div class="Project2">
-                    <span class="material-symbols-sharp">diversity_3</span>
-
-                    <div class="middle">
-                        <div class="left">
-                            
-                            <h1>Mental Well-Being</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>71%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">See Data</small>
-                </div>
-                <!-- end of project 2 -->
-                <div class="Project3">
-                    <span class="material-symbols-sharp">person</span>
-
-                    <div class="middle">
-                        <div class="left">
-                            
-                            <h1>Task Manager</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>54%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end of project3 -->
-            </div>
-        </main>
-        <div class="right">
-            <div class="top">
-                <button id="menu-btn">
-                    <span class="material-symbols-sharp">menu</span>
-                </button>
-                <div class="theme-toggler">
-                    <span class="material-symbols-sharp active">light_mode</span>
-
-                    <span class="material-symbols-sharp">dark_mode</span>
-
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <p>Welcome, <b>Jay</b></p>
-                        <small class="text-muted">Student</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="./images/profile-1.jpg" alt="">
-                    </div>
+                <div class="button">
+                    <button onclick="showSignupForm()">SIGN UP</button>
                 </div>
             </div>
-            <!-- end of profile -->
-            <div class="recent-updates">
-                <h2>Recent Updates</h2>
-                <div class="updates">
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/GITAM-logo.jpg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>GITAM ADMIN</b> "College Launches Eco-Friendly Campus Initiative, Plans to Go Carbon Neutral by 2030."</p>
-                            <small class="text-muted">39 Minutes Ago</small>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/tedlogo.jpg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>TEDx Gitam</b> "Campus Welcomes Renowned Speaker for Inspiring TEDx Talk on Future of Technology and Education."</p>
-                            <small class="text-muted">7 Hours Ago</small>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/profile-3.jpg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Dr Shraddha Kapoor</b> "Groundbreaking Research at GITAM Leads to Potential Breakthrough in Cancer Treatment."</p>
-                            <small class="text-muted">1 Day Ago</small>
-                        </div>
-                    </div>
+            <div id="signupForm" style="display: none;">
+                <div class="USERNAME">
+                    <input type="text" id="newUsername" placeholder="NEW USERNAME"> 
                 </div>
-            </div>
-            <!-- end of updates -->
-            <div class="resources">
-                <h2>Resources</h2>
-                <div class="item drive">
-                    <div class="icon">
-                        <span class="material-symbols-sharp">add_to_drive</span> 
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Google Drive</h3>
-                            <small class="text-muted">google</small>
-                        </div>
-                        
-                        <h3>439</h3>
-                    </div>
+                <div class="PASSWORD">
+                    <input type="password" id="newPassword" placeholder="NEW PASSWORD">
                 </div>
-                <div class="item research">
-                    <div class="icon">
-                        <span class="material-symbols-sharp">collections_bookmark</span> 
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Research Papers</h3>
-                            <small class="text-muted">Github</small>
-                        </div>
-                        
-                        <h3>3849</h3>
-                    </div>
+                <div class="button">
+                    <button onclick="signup()">SIGN UP</button>
                 </div>
-                <div class="item collaboration">
-                    <div class="icon">
-                        <span class="material-symbols-sharp">add_a_photo</span> 
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Collaboration Tools</h3>
-                            <small class="text-muted">Workspace</small>
-                        </div>
-                        
-                        <h3>21</h3>
-                    </div>
+                <div class="button">
+                    <button onclick="showLoginForm()">BACK TO LOGIN</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
